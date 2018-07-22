@@ -74,7 +74,7 @@ review_data_fdist = [(nltk.FreqDist(token.lower() for token in words if token in
 # Shuffle data randomly    
 random.seed(42) 
 random.shuffle(review_data_fdist) 
-# Split in training and test set 
+# Split in training (80 percent) and test set (20 percent)
 trainSize = int(0.8 * len(review_data_fdist)) 
 trainData, testData = review_data_fdist[:trainSize], review_data_fdist[trainSize+1:] 
 # Get the features
